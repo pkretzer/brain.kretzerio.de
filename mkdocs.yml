@@ -1,0 +1,79 @@
+site_name: My Brain
+site_url: https://brain.kretzerio.de
+repo_url: https://github.com/pkretzer/brain.kretzerio.de
+site_author: Pascal Kretzer
+copyright: Copyright &copy; 2024 Pascal Kretzer
+extra_css:
+    - style.css
+theme: 
+  name: material # https://squidfunk.github.io/mkdocs-material/setup/
+  logo: images/favicon.png
+  favicon: images/favicon.png
+  features:
+    - navigation.tabs
+    - content.code.copy
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night # (2)!
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: VT323
+    #code: VT323
+  
+  highlightjs: true
+  hljs_style: Github
+  hljs_languages:
+    - yaml
+    - rust
+    - apache
+    - awk
+    - bash
+    - basic
+    - csharp
+    - c
+    - cpp
+    - css
+    - django
+    - dns
+    - dockerfile
+    - dos
+    - excel
+    - go
+    - http
+    - json
+    - javascript
+    - markdown
+    - nginx
+    - php
+    - perl
+    - plaintext
+    - pgsql
+    - powershell
+    - python
+    - sql
+    - shell
+plugins:
+  - privacy
+  - search
+  - tags
+  - glightbox
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

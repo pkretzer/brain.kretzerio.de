@@ -1,0 +1,17 @@
+/* Color for headlines */
+.md-typeset h1 {
+  color: orange;
+}
+
+.md-typeset h2 {
+  color: rgb(8, 212, 8);
+}
+
+.md-typeset h3 {
+  color: rgb(198, 212, 8);
+}
+
+.md-typeset h4 {
+  color: rgb(8, 212, 202);
+}
+
