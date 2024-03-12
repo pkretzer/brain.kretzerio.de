@@ -6,6 +6,12 @@ tags:
 ---
 
 # MDADM
+## Start manual mdadm RAID-Check
+With the below command you can start a manual raid-check, just change md0 to your raid name.
+```bash
+echo check > /sys/block/md0/md/sync_action
+```
+
 ## Stop mdadm RAID-Check
 With the below command you can stop a running raid-check, just change md0 to your raid name.
 ```bash
