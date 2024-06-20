@@ -32,9 +32,9 @@ Possible values are:
 openssl s_client -connect myawesomeserver.de:587 -starttls smtp -tls1_2
 ```
 
-## Show certificate information
+## Show certificate information as clear text
 ```bash
-openssl x509 -in my.pem -text
+openssl x509 -in my.pem -text -noout
 ```
 
 ## Show expiry or start date of certificate
