@@ -11,6 +11,7 @@ tags:
     - lldp
     - avago
     - dd
+    - bash
 ---
 
 # Helpful-Commands
@@ -173,4 +174,9 @@ nsupdate
 server localhost
 add myserver.local 3600 A 1.1.1.1
 send
+```
+
+## Show Output of all commands in Shell script
+```bash
+sh -x myscript.sh
 ```
