@@ -28,5 +28,5 @@ openssl dhparam -out /etc/ssl/dhparams.pem 4096
 
 ## Create a CSR (Certificate Signing Request) with one line
 ```bash
-openssl req -new -nodes -sha256 -newkey rsa:4096 -keyout example.com.key -out example.com.csr -subj "/emailAddress=domain@example.com/C=Country/ST=State/L=Location/O=Organization/CN=example.com" -addext "keyUsage=keyEncipherment, dataEncipherment" -addext "extendedKeyUsage=serverAuth" -addext "subjectAltName=DNS:example.com,*.example.com"
+openssl req -new -nodes -sha256 -newkey rsa:4096 -keyout example.com.key -out example.com.csr -subj "/emailAddress=domain@example.com/C=Country/ST=State/L=Location/O=Organization/CN=example.com" -addext "keyUsage=keyEncipherment, dataEncipherment" -addext "extendedKeyUsage=serverAuth" -addext "subjectAltName=DNS:example.com,DNS:*.example.com"
 ```
