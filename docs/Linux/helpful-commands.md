@@ -180,3 +180,24 @@ send
 ```bash
 sh -x myscript.sh
 ```
+
+## Show and sort swap usage by process
+```bash
+for file in /proc/*/status ; do awk '/VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | sort -k 2 -n -r | less
+```
+
+## fail2ban
+**Show status for jail**
+```bash
+fail2ban-client status JAILNAME
+```
+
+**Unban IP**
+```bash
+fail2ban-client set JAILNAME unbanip ip
+```
+
+**Ban IP**
+```bash
+fail2ban-client set JAILNAME banip ip
+```
