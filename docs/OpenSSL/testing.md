@@ -34,6 +34,9 @@ openssl s_client -connect myawesomeserver.de:587 -starttls smtp -tls1_2
 
 ## Show certificate information as clear text
 ```bash
+openssl s_client -showcerts -connect my.domain:443 | openssl x509 -noout -text
+```
+```bash
 openssl x509 -in my.pem -text -noout
 ```
 
