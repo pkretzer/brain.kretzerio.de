@@ -201,3 +201,8 @@ fail2ban-client set JAILNAME unbanip ip
 ```bash
 fail2ban-client set JAILNAME banip ip
 ```
+
+## convert iso to qcow2 image
+```bash
+qemu-img convert -O qcow2 file.iso file.qcow2
+```
