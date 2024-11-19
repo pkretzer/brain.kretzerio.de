@@ -108,3 +108,9 @@ parted /dev/sdf mklabel gpt mkpart primary 0% 100%
 ```bash
 parted /dev/sd[a...z] mklabel gpt mkpart primary 0% 100%
 ```
+
+**or**
+```bash
+for i in /dev/sd[a-z]; do parted $i mklabel gpt mkpart primary 0% 100%; done
+```
+
