@@ -55,7 +55,7 @@ $existing_task = schtasks /query | Select-String "VMware-Tools-Upgrade-Restart"
 
 ```
 
-## SQL WHERE Query with to values
+## SQL WHERE Query with two values
 ```sql
 SELECT [ModuleAndEventText]
       ,[Time]
@@ -66,3 +66,14 @@ SELECT [ModuleAndEventText]
 
 ## Cant uninstall msi
 [Microsoft-KB](https://support.microsoft.com/en-us/topic/fix-problems-that-block-programs-from-being-installed-or-removed-cca7d1b6-65a9-3d98-426b-e9f927e1eb4d)
+
+## Sync via robocopy
+The below command mirrors a directory and also copies the timestamps from files and folders.  
+/mir -> Mirror  
+/copy:DAT -> Copy file data, attributes and timestamps  
+/dcopy:T -> Copy folder timestamps  
+/mt:16 -> Multi Threaded copy  
+/log -> Path for log output  
+~~~cmd
+robocopy.exe C:\my\source \\192.168.1.1\target /mir /copy:DAT /dcopy:T /mt:16 /log:C:\users\admin\desktop\copylog.txt
+~~~
