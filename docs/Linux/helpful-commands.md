@@ -106,6 +106,10 @@ qrencode -t png -o ~/filename.png 'WIFI:S:SSID-Name;T:WPA2;P:Password;;'
 
 ## Clear systemd DNS cache
 ```bash
+sudo resolvectl flush-caches 
+```
+or for older versions  
+```bash
 sudo systemd-resolve --flush-cache
 ```
 
