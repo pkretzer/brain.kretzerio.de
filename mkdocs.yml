@@ -2,7 +2,7 @@ site_name: My Brain
 site_url: https://brain.kretzerio.de
 repo_url: https://github.com/pkretzer/brain.kretzerio.de
 site_author: Pascal Kretzer
-copyright: Copyright &copy; 2024 Pascal Kretzer
+copyright: Copyright &copy; 2025 Pascal Kretzer
 extra_css:
     - style.css
 theme: 
