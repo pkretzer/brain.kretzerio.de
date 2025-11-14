@@ -12,6 +12,7 @@ tags:
     - avago
     - dd
     - bash
+    - ssh
 ---
 
 # Helpful-Commands
@@ -209,4 +210,18 @@ fail2ban-client set JAILNAME banip ip
 ## convert iso to qcow2 image
 ```bash
 qemu-img convert -O qcow2 file.iso file.qcow2
+```
+## ssh session without using the private key
+```bash
+ssh -o PasswordAuthentication=yes -o PreferredAuthentications=keyboard-interactive,password <user@ip>
+```
+
+## ssh into server, dump traffic and show locally in wireshark (sudo without password)
+```bash
+ssh -o StrictHostKeychecking=no <user@ip> sudo tcpdump -i <interfacename> -U -w - | sudo wireshark -k -i -
+```
+
+## show information about network interface
+```bash
+ip -s link show <interfacename>
 ```
