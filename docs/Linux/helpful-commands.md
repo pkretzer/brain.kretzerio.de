@@ -225,3 +225,17 @@ ssh -o StrictHostKeychecking=no <user@ip> sudo tcpdump -i <interfacename> -U -w 
 ```bash
 ip -s link show <interfacename>
 ```
+
+## chroot via live linux
+To reset the password, install missing packages or fix the bootloader you need to mount a few paths and chroot into the original system via a live system.  
+```bash
+sudo mkdir -p /mnt/root/boot/efi
+sudo mount /dev/sda1 /mnt/root/boot/efi
+sudo mount /dev/sda2 /mnt/root/boot
+sudo mount /dev/sda3 /mnt/root
+sudo mount --bind /dev /mnt/root/dev 
+sudo mount --bind /proc /mnt/root/proc
+sudo mount --bind /dev/pts /mnt/root/dev/pts 
+sudo mount --bind /sys /mnt/root/sys 
+sudo chroot /mnt/root
+```
